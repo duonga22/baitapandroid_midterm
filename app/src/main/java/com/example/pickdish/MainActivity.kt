@@ -53,16 +53,8 @@ class MainActivity : AppCompatActivity() {
         var randomInt:Int = Random.nextInt( list.size)
         dishNum.text = list[randomInt].title
 
-        val drawbleImage = when(randomInt){
-            1-> list[1].img
-            2-> list[2].img
-            3-> list[3].img
-            4-> list[4].img
-            5-> list[5].img
-            else-> list[6].img
-        }
         dishDesc.text = list[randomInt].desc
-        dishImg.setImageResource(drawbleImage)
+        dishImg.setImageResource(list[randomInt].img)
         Toast.makeText(this, "Đã lắc thành công!", Toast.LENGTH_SHORT).show()
 
         return randomInt;
